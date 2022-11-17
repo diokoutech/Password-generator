@@ -6,7 +6,7 @@
      <h2>Générateur de mot de passe</h2>
   </header>
   <div class="container mx-auto">
-    <section class="lg:w-2/4 sm:w-full mx-auto">
+    <section class="lg:w-2/4 sm:w-full p-2 mx-auto">
       <ul>
         <li>
           <label for="alpha" (click)="generate()" [ngClass]="alpha.value == true ? 'text-white border-white' : 'text-sky-900 border-sky-900' " class="p-2 block my-2 font-medium cursor-pointer border-l-4 ease-in transition-all duration-300" >
@@ -39,7 +39,7 @@
           <span class="w-32 block h-2 p-1 bg-sky-500"></span>
           <span class="w-32 block h-2 p-1 bg-sky-700"></span>
           <span class="w-32 block h-2 p-1 bg-sky-900"></span>
-          <span class="mx-2 self-end">{{status}}</span>
+          <span class="ml-5 justify-self-end">{{status}}</span>
         </li>
         <li class="text-center p-2 text-sky-900 font-medium">
           <button (click)="copyPassword()"><i class="fad fa-copy"></i> {{ isCopy ? 'Mot de passe copié' : 'Copier le mot de passe' }} </button>
