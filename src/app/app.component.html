@@ -10,7 +10,7 @@
       <ul>
         <li>
           <label for="alpha" (click)="generate()" [ngClass]="alpha.value == true ? 'text-white border-white' : 'text-sky-900 border-sky-900' " class="p-2 block my-2 font-medium cursor-pointer border-l-4 ease-in transition-all duration-300" >
-            <input type="checkbox" [formControl]="alpha" class="hidden"  name="alpha" id="alpha"> <i class="fad fa-font-case mx-1"></i> Caractères alphabètes (minuscules, majuscules)
+            <input type="checkbox" [formControl]="alpha" class="hidden"  name="alpha" id="alpha"> <i class="fad fa-font-case mx-1"></i> Caractères alphabet
           </label>
         </li>
         <li>
@@ -35,10 +35,10 @@
         </li>
         <li>
         </li>
-        <li class="my-2 flex justify-start items-center flex-row">
-          <span class="w-32 block h-2 p-1 bg-sky-500"></span>
-          <span class="w-32 block h-2 p-1 bg-sky-700"></span>
-          <span class="w-32 block h-2 p-1 bg-sky-900"></span>
+        <li class="my-2 flex justify-start items-center ease-in transition-all duration-300 flex-row">
+          <span *ngIf="status.toLowerCase().indexOf('moyen') != -1 || status.toLowerCase().indexOf('forte') != -1" class="w-32 block ease-in transition-all duration-300 h-2 p-1 bg-sky-500"></span>
+          <span *ngIf="status.toLowerCase().indexOf('forte') != -1" class="w-32 block h-2 ease-in transition-all duration-300 p-1 bg-sky-700"></span>
+          <span *ngIf="status.toLowerCase().indexOf('très') != -1" class="w-32 block h-2 ease-in transition-all duration-300 p-1 bg-sky-900"></span>
           <span class="ml-5 justify-self-end">{{status}}</span>
         </li>
         <li class="text-center p-2 text-sky-900 font-medium">

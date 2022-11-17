@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
   ajuster_chaine : FormControl = new FormControl(false);
   longPassword=8;
   status:string = 'Moyen';
+
   ngOnInit(): void {
   this.generate();
   }
@@ -63,6 +64,7 @@ export class AppComponent implements OnInit {
     this.passwordGenerated = alpha+num;
     let item = this.getShuffledArr(this.passwordGenerated);
     this.passwordGenerated = item.toString().split(',').join('');
+    this.toggleStatus();
   }
 
   copyPassword()
@@ -79,6 +81,6 @@ export class AppComponent implements OnInit {
 }
 toggleStatus()
 {
-  
+  this.status = this.chiffre.value == true || this.special_caracter.value == true ? 'Forte' : 'Moyen'; 
 }
 }
