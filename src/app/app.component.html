@@ -29,20 +29,20 @@
           </label>
         </li>
         <li class="p-1 relative ease-in transition-all duration-300 tracking-widest mt-4 text-center font-bold bg-white text-2xl rounded-md">
-          <span class="absolute left-0 pr-2">
+          <span class="absolute pl-1  left-0 pr-2">
           <button (click)="reset()" title="rafraichir"><i class="fad fa-redo"></i></button>
           </span>
           <span class="ease-in transition-all duration-300">{{ passwordGenerated }}</span>
-          <span class="absolute right-0 pl-2">
+          <span class="absolute right-0 pr-1  pl-2">
           <button (click)="copyPassword()" [title]="isCopy ? 'Mot de passe copié' : 'Copier le mot de passe' " ><i class="fad fa-copy"></i></button>
           </span>
         </li>
         <li>
         </li>
-        <li class="my-2 flex justify-start items-center ease-in transition-all duration-300 flex-row">
-          <span *ngIf="status.toLowerCase().indexOf('moyen') != -1 || status.toLowerCase().indexOf('forte') != -1" class="w-32 block ease-in transition-all duration-300 h-2 p-1 bg-sky-500"></span>
-          <span *ngIf="status.toLowerCase().indexOf('forte') != -1" class="w-32 block h-2 ease-in transition-all duration-300 p-1 bg-sky-700"></span>
-          <span *ngIf="status.toLowerCase().indexOf('très') != -1" class="w-32 block h-2 ease-in transition-all duration-300 p-1 bg-sky-900"></span>
+        <li class="my-2 flex justify-start flex-wrap items-center ease-in transition-all duration-300 flex-row">
+          <span *ngIf="status.toLowerCase().indexOf('moyen') != -1 || status.toLowerCase().indexOf('forte') != -1" class="sm:w-32 w-16  block ease-in transition-all duration-300 h-2 p-1 bg-sky-500"></span>
+          <span *ngIf="status.toLowerCase().indexOf('forte') != -1" class="sm:w-32 w-16 block h-2 ease-in transition-all duration-300 p-1 bg-sky-700"></span>
+          <span *ngIf="status.toLowerCase().indexOf('très') != -1" class="sm:w-32 w-16 block h-2 ease-in transition-all duration-300 p-1 bg-sky-900"></span>
           <span class="ml-5 justify-self-end">{{status}}</span>
         </li>
         <li class="text-center p-2 text-sky-900 font-medium">
