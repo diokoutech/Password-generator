@@ -40,11 +40,8 @@ export class AppComponent implements OnInit {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   generate() {
-    let alpha =
-      (this.alpha && this.chiffre.value === false) ||
-      (this.alpha && this.special_caracter.value === false)
-        ? this.generateElement(8, this.listAlpha, this.listAlpha.length)
-        : this.generateElement(4, this.listAlpha, this.listAlpha.length);
+    // init
+    let alpha =this.generateElement(8, this.listAlpha, this.listAlpha.length);
     // chiifres
     this.chiffre.valueChanges.subscribe((chiffreValue: any) => {
       alpha =

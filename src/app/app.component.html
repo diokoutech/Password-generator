@@ -39,11 +39,11 @@
         </li>
         <li>
         </li>
-        <li class="my-2 flex justify-start flex-wrap items-center ease-in transition-all duration-300 flex-row">
-          <span *ngIf="status.toLowerCase().indexOf('moyen') != -1 || status.toLowerCase().indexOf('forte') != -1" class="sm:w-32 w-16  block ease-in transition-all duration-300 h-2 p-1 bg-sky-500"></span>
+        <li class="my-2 flex justify-start items-center ease-in transition-all duration-300 flex-row">
+          <span *ngIf="status.toLowerCase().indexOf('moyen') != -1 || status.toLowerCase().indexOf('fort') != -1" class="sm:w-32 w-16  block ease-in transition-all duration-300 h-2 p-1 bg-sky-500"></span>
           <span *ngIf="status.toLowerCase().indexOf('fort') != -1" class="sm:w-32 w-16 block h-2 ease-in transition-all duration-300 p-1 bg-sky-700"></span>
           <span *ngIf="status.toLowerCase().indexOf('très') != -1" class="sm:w-32 w-16 block h-2 ease-in transition-all duration-300 p-1 bg-sky-900"></span>
-          <span class="ml-5 justify-self-end">{{status | uppercase}}</span>
+          <span class="ml-5 justify-self-end">{{status}}</span>
         </li>
         <li class="text-center p-2 text-sky-900 font-medium">
           <button (click)="copyPassword()"><i class="fad fa-copy"></i> {{ isCopy ? 'Mot de passe copié' : 'Copier le mot de passe' }} </button>
