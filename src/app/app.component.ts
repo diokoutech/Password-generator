@@ -138,12 +138,12 @@ export class AppComponent implements OnInit {
   }
   toggleStatus() {
     if (this.chiffre.value == true && this.special_caracter.value == true) {
-      this.status = 'Très Forte';
+      this.status = 'Très Fort';
     } else if (
       this.chiffre.value == true ||
       this.special_caracter.value == true
     ) {
-      this.status = 'Forte';
+      this.status = 'Fort';
     } else {
       this.status = 'Moyen';
     }
